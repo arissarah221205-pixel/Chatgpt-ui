@@ -1,26 +1,78 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ChatGPT UI</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>ZenChat - AI Assistant</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="app-container">
+        <!-- Sidebar (mirip ChatGPT) -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <button class="new-chat-btn" id="newChatBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    New Chat
+                </button>
+            </div>
+            <div class="chat-history" id="chatHistory">
+                <div class="history-item active">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    <span>Chat Baru</span>
+                </div>
+            </div>
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <div class="avatar">Z</div>
+                    <span>Zen User</span>
+                </div>
+            </div>
+        </div>
 
-<div class="app">
-  <header class="header">
-    <div class="title">ChatGPT</div>
-  </header>
+        <!-- Main Chat Area -->
+        <div class="main-chat">
+            <div class="chat-header">
+                <button class="menu-btn" id="menuBtn">☰</button>
+                <h2>ZenChat AI</h2>
+                <div class="header-actions">
+                    <button class="theme-toggle" id="themeToggle">🌙</button>
+                </div>
+            </div>
 
-  <main id="chat" class="chat"></main>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message assistant">
+                    <div class="avatar">🤖</div>
+                    <div class="content">
+                        <p>Halo BOSS! 👋</p>
+                        <p>Aku ZenChat AI, siap membantu coding, menjawab pertanyaan, dan ngobrol santai.</p>
+                        <p>Coba tanya apa aja, BOSS!</p>
+                    </div>
+                </div>
+            </div>
 
-  <footer class="input-wrapper">
-    <textarea id="input" placeholder="Send a message"></textarea>
-    <button id="send">➤</button>
-  </footer>
-</div>
+            <div class="chat-input-container">
+                <div class="input-wrapper">
+                    <textarea id="messageInput" placeholder="Ketik pesan ke ZenChat..." rows="1"></textarea>
+                    <button id="sendBtn" class="send-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </div>
+                <div class="input-footer">
+                    <span>ZenChat by ZEN GUARD</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
