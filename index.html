@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <title>AI Chat</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ChatGPT UI</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="app">
-    <header class="header">AI Chat</header>
+<div class="app">
+  <header class="header">
+    <div class="title">ChatGPT</div>
+  </header>
 
-    <div id="chat" class="chat"></div>
+  <main id="chat" class="chat"></main>
 
-    <div class="input-area">
-      <textarea id="input" placeholder="Ketik pesan..."></textarea>
-      <button onclick="send()">➤</button>
-    </div>
-  </div>
+  <footer class="input-wrapper">
+    <textarea id="input" placeholder="Send a message"></textarea>
+    <button id="send">➤</button>
+  </footer>
+</div>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
